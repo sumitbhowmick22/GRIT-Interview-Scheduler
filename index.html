@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GRIT Interview Scheduler</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+<style>[hidden]{display:none!important}</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand"><span class="mark">G</span><span>GRIT Interviews <small>Prototype</small></span></div>
+    <nav class="tabs" id="roleNav" aria-label="Choose a view">
+      <button data-act="role" data-id="student">Student</button>
+      <button data-act="role" data-id="interviewer">Interviewer</button>
+      <button data-act="role" data-id="team">Interview team</button>
+      <button data-act="role" data-id="msgs">Student messages</button>
+      <button data-act="role" data-id="ba">Before &amp; after</button>
+    </nav>
+  </header>
+  <div class="demo">
+    <span>Demo clock (IST): <b id="clock"></b></span>
+    <span class="sp"></span>
+    <button class="btn sec sm" data-act="skip" id="skipBtn">Skip to Mon 16 Nov, 6:00 PM</button>
+    <button class="btn sec sm" data-act="reset">Reset demo</button>
+  </div>
+  <p class="muted sm">Demo path: Student, book a slot. Interviewer, open Daily schedule. Skip the clock, record an outcome. Back to Student for Home and Badges. Then Interview team, Student messages and Before &amp; after.</p>
+  <main id="view"></main>
+</div>
+<div class="toast" id="toast" hidden></div>
+<script src="js/utils.js"></script>
+<script src="js/data.js"></script>
+<script src="js/state.js"></script>
+<script src="js/views-student.js"></script>
+<script src="js/views-interviewer.js"></script>
+<script src="js/views-team.js"></script>
+<script src="js/views-compare.js"></script>
+<script src="js/actions.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
